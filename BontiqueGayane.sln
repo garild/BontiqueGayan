@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BontiqueGayane", "BontiqueGayane\BontiqueGayane.csproj", "{303D3A81-A0D9-4137-9407-9147A5E1BFA0}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{1668F1B9-BE00-4D58-8BE7-F4B204A51148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C68C1687-2B0B-4946-B90F-5DD39B1899D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{303D3A81-A0D9-4137-9407-9147A5E1BFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303D3A81-A0D9-4137-9407-9147A5E1BFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303D3A81-A0D9-4137-9407-9147A5E1BFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303D3A81-A0D9-4137-9407-9147A5E1BFA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1668F1B9-BE00-4D58-8BE7-F4B204A51148} = {C68C1687-2B0B-4946-B90F-5DD39B1899D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4FF8012-2020-44D8-B3D3-76DEEA6F6427}
+	EndGlobalSection
+EndGlobal

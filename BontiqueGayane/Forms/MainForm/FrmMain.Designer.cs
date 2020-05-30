@@ -29,14 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AC.ExtendedRenderer.Navigator.OutlookBarButton outlookBarButton6 = new AC.ExtendedRenderer.Navigator.OutlookBarButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            AC.ExtendedRenderer.Navigator.OutlookBarButton outlookBarButton7 = new AC.ExtendedRenderer.Navigator.OutlookBarButton();
-            AC.ExtendedRenderer.Navigator.OutlookBarButton outlookBarButton8 = new AC.ExtendedRenderer.Navigator.OutlookBarButton();
-            AC.ExtendedRenderer.Navigator.OutlookBarButton outlookBarButton9 = new AC.ExtendedRenderer.Navigator.OutlookBarButton();
-            AC.ExtendedRenderer.Navigator.OutlookBarButton outlookBarButton10 = new AC.ExtendedRenderer.Navigator.OutlookBarButton();
-            this.outlookBar = new AC.ExtendedRenderer.Navigator.OutlookBar();
-            this.StyleManager = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -48,81 +41,14 @@
             this.tstrComputerName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonUACElevatedButton1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.kryptonUACElevatedButton3 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.kryptonUACElevatedButton4 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.kryptonUACElevatedButton2 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // outlookBar
-            // 
-            this.outlookBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.outlookBar.ButtonColorHoveringBottom = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(177)))));
-            this.outlookBar.ButtonColorHoveringTop = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(77)))));
-            this.outlookBar.ButtonColorPassiveBottom = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
-            this.outlookBar.ButtonColorPassiveTop = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(208)))), ((int)(((byte)(214)))));
-            this.outlookBar.ButtonColorSelectedAndHoveringBottom = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(207)))), ((int)(((byte)(100)))));
-            this.outlookBar.ButtonColorSelectedAndHoveringTop = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(142)))), ((int)(((byte)(49)))));
-            this.outlookBar.ButtonColorSelectedBottom = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(108)))));
-            this.outlookBar.ButtonColorSelectedTop = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(122)))), ((int)(((byte)(5)))));
-            this.outlookBar.ButtonHeight = 40;
-            outlookBarButton6.BuddyPage1 = "Products";
-            outlookBarButton6.BuddyPage2 = null;
-            outlookBarButton6.Image = ((System.Drawing.Icon)(resources.GetObject("outlookBarButton6.Image")));
-            outlookBarButton6.Tag1 = null;
-            outlookBarButton6.Tag2 = null;
-            outlookBarButton6.Text = "Produkty";
-            outlookBarButton7.BuddyPage1 = "Moneys";
-            outlookBarButton7.BuddyPage2 = null;
-            outlookBarButton7.Image = ((System.Drawing.Icon)(resources.GetObject("outlookBarButton7.Image")));
-            outlookBarButton7.Tag1 = null;
-            outlookBarButton7.Tag2 = null;
-            outlookBarButton7.Text = "Finanse";
-            outlookBarButton8.BuddyPage1 = "Settings";
-            outlookBarButton8.BuddyPage2 = null;
-            outlookBarButton8.Image = ((System.Drawing.Icon)(resources.GetObject("outlookBarButton8.Image")));
-            outlookBarButton8.Tag1 = null;
-            outlookBarButton8.Tag2 = null;
-            outlookBarButton8.Text = "Ustawienia";
-            outlookBarButton9.BuddyPage1 = "UserList";
-            outlookBarButton9.BuddyPage2 = "UserList";
-            outlookBarButton9.Image = ((System.Drawing.Icon)(resources.GetObject("outlookBarButton9.Image")));
-            outlookBarButton9.Tag1 = null;
-            outlookBarButton9.Tag2 = null;
-            outlookBarButton9.Text = "Użytkownicy";
-            outlookBarButton10.BuddyPage1 = "Customers";
-            outlookBarButton10.BuddyPage2 = "Customers";
-            outlookBarButton10.Image = ((System.Drawing.Icon)(resources.GetObject("outlookBarButton10.Image")));
-            outlookBarButton10.Tag1 = null;
-            outlookBarButton10.Tag2 = null;
-            outlookBarButton10.Text = "Klienci";
-            this.outlookBar.Buttons.Add(outlookBarButton6);
-            this.outlookBar.Buttons.Add(outlookBarButton7);
-            this.outlookBar.Buttons.Add(outlookBarButton8);
-            this.outlookBar.Buttons.Add(outlookBarButton9);
-            this.outlookBar.Buttons.Add(outlookBarButton10);
-            this.outlookBar.CausesValidation = false;
-            this.outlookBar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.outlookBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.outlookBar.DrawBorders = true;
-            this.outlookBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.outlookBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.outlookBar.ForeColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.outlookBar.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
-            this.outlookBar.Location = new System.Drawing.Point(0, 0);
-            this.outlookBar.MinimumSize = new System.Drawing.Size(16, 40);
-            this.outlookBar.Name = "outlookBar";
-            this.outlookBar.OutlookBarLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(83)))), ((int)(((byte)(92)))));
-            this.outlookBar.Padding = new System.Windows.Forms.Padding(12);
-            this.outlookBar.Renderer = AC.ExtendedRenderer.Navigator.Renderer.Krypton;
-            this.outlookBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.outlookBar.Size = new System.Drawing.Size(247, 200);
-            this.outlookBar.TabIndex = 2;
-            this.outlookBar.TabStop = false;
-            this.outlookBar.Text = "outlookBar";
-            this.outlookBar.ButtonClicked += new AC.ExtendedRenderer.Navigator.OutlookBar.ButtonClickedEventHandler(this.outlookBar_ButtonClicked);
-            // 
-            // StyleManager
-            // 
-            this.StyleManager.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
             // 
             // toolStripProgressBar1
             // 
@@ -210,12 +136,64 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.outlookBar);
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.kryptonUACElevatedButton4);
+            this.panel1.Controls.Add(this.kryptonUACElevatedButton3);
+            this.panel1.Controls.Add(this.kryptonUACElevatedButton2);
+            this.panel1.Controls.Add(this.kryptonUACElevatedButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 789);
             this.panel1.TabIndex = 3;
+            // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
+            // 
+            // kryptonUACElevatedButton1
+            // 
+            this.kryptonUACElevatedButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonUACElevatedButton1.Location = new System.Drawing.Point(0, 1);
+            this.kryptonUACElevatedButton1.Name = "kryptonUACElevatedButton1";
+            this.kryptonUACElevatedButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
+            this.kryptonUACElevatedButton1.Size = new System.Drawing.Size(247, 70);
+            this.kryptonUACElevatedButton1.TabIndex = 5;
+            this.kryptonUACElevatedButton1.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton1.Values.Image")));
+            this.kryptonUACElevatedButton1.Values.Text = "kryptonUACElevatedButton1";
+            // 
+            // kryptonUACElevatedButton3
+            // 
+            this.kryptonUACElevatedButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonUACElevatedButton3.Location = new System.Drawing.Point(0, 134);
+            this.kryptonUACElevatedButton3.Name = "kryptonUACElevatedButton3";
+            this.kryptonUACElevatedButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
+            this.kryptonUACElevatedButton3.Size = new System.Drawing.Size(247, 70);
+            this.kryptonUACElevatedButton3.TabIndex = 5;
+            this.kryptonUACElevatedButton3.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton3.Values.Image")));
+            this.kryptonUACElevatedButton3.Values.Text = "kryptonUACElevatedButton1";
+            // 
+            // kryptonUACElevatedButton4
+            // 
+            this.kryptonUACElevatedButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonUACElevatedButton4.Location = new System.Drawing.Point(0, 200);
+            this.kryptonUACElevatedButton4.Name = "kryptonUACElevatedButton4";
+            this.kryptonUACElevatedButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
+            this.kryptonUACElevatedButton4.Size = new System.Drawing.Size(247, 70);
+            this.kryptonUACElevatedButton4.TabIndex = 5;
+            this.kryptonUACElevatedButton4.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton4.Values.Image")));
+            this.kryptonUACElevatedButton4.Values.Text = "kryptonUACElevatedButton1";
+            // 
+            // kryptonUACElevatedButton2
+            // 
+            this.kryptonUACElevatedButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonUACElevatedButton2.Location = new System.Drawing.Point(0, 68);
+            this.kryptonUACElevatedButton2.Name = "kryptonUACElevatedButton2";
+            this.kryptonUACElevatedButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
+            this.kryptonUACElevatedButton2.Size = new System.Drawing.Size(247, 70);
+            this.kryptonUACElevatedButton2.TabIndex = 5;
+            this.kryptonUACElevatedButton2.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton2.Values.Image")));
+            this.kryptonUACElevatedButton2.Values.Text = "kryptonUACElevatedButton1";
             // 
             // FrmMain
             // 
@@ -240,7 +218,6 @@
         }
 
         #endregion
-        private ComponentFactory.Krypton.Toolkit.KryptonManager StyleManager;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
@@ -252,7 +229,11 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
         private System.Windows.Forms.ToolStripStatusLabel tstrComputerName;
         private System.Windows.Forms.Panel panel1;
-        public AC.ExtendedRenderer.Navigator.OutlookBar outlookBar;
+        public ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton1;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton4;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton3;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton2;
     }
 }
 

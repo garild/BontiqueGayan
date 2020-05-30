@@ -1,17 +1,15 @@
 ﻿using Microsoft.SqlServer.Dac;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SkyReg.Forms.DatabaseConfiguration
 {
     public static class DatabaseDeploy
     {
         private static bool IsErrorAtDeyploment;
-        public static void Deploy(string dacpacFileName,string databaseName, string connectionString)
+        public static void Deploy(string dacpacFileName,string databaseName)
         {
+            var connectionString = $"Data Source={Environment.MachineName};Initial Catalog={databaseName};Integrated Security=True;Connect Timeout=0;Encrypt=False;TrustServerCertificate=True;";
+
             var dacServices = new DacServices(connectionString);
             dacServices.Message += DacServices_Message;
             var options = new DacDeployOptions
@@ -29,7 +27,6 @@ namespace SkyReg.Forms.DatabaseConfiguration
 
             dacServices.Deploy(DacPackage.Load(dacpacFileName), databaseName, true, options);
 
-            Console.ReadKey();
         }
 
         private static void DacServices_Message(object sender, DacMessageEventArgs e)

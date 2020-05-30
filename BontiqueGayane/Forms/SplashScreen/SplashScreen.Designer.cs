@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.progressBar = new MetroFramework.Controls.MetroProgressBar();
-            this.labAppVersion = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Text_AppVersion = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,24 +53,22 @@
             this.progressBar.Style = MetroFramework.MetroColorStyle.Green;
             this.progressBar.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // labAppVersion
+            // Text_AppVersion
             // 
-            this.labAppVersion.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            resources.ApplyResources(this.labAppVersion, "labAppVersion");
-            this.labAppVersion.Name = "labAppVersion";
-            this.labAppVersion.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Silver;
-            this.labAppVersion.StateCommon.LongText.Color1 = System.Drawing.Color.White;
-            this.labAppVersion.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.labAppVersion.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
-            this.labAppVersion.Values.Text = resources.GetString("labAppVersion.Values.Text");
+            this.Text_AppVersion.BackColor = System.Drawing.Color.Transparent;
+            this.Text_AppVersion.Brush = System.Drawing.Color.White;
+            resources.ApplyResources(this.Text_AppVersion, "Text_AppVersion");
+            this.Text_AppVersion.ForeColor = System.Drawing.Color.Black;
+            this.Text_AppVersion.Name = "Text_AppVersion";
+            this.Text_AppVersion.Radius = 10;
             // 
             // SplashScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackgroundImage = global::SkyReg.Properties.Resources.bontiqueShop;
-            this.Controls.Add(this.labAppVersion);
+            this.BackgroundImage = global::BoutiqueShopp.Properties.Resources.bontiqueShop;
+            this.Controls.Add(this.Text_AppVersion);
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Custom2;
@@ -82,13 +80,12 @@
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroProgressBar progressBar;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel labAppVersion;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox Text_AppVersion;
     }
 }

@@ -20,13 +20,13 @@ namespace SkyReg.Forms.SplashScreen
         {
             InitializeComponent();
 
-            SkyRegUser.GlobalPathFile = Environment.GetFolderPath((Environment.SpecialFolder.LocalApplicationData)) + @"\SkyReg";
+            SkyRegUser.GlobalPathFile = Environment.GetFolderPath((Environment.SpecialFolder.LocalApplicationData)) + @"\BoutiqueShop";
             SkyRegUser.DatabaseConfigFile = string.Format("{0}\\DatabaseConfig.xml", SkyRegUser.GlobalPathFile);
             SkyRegUser.UserConfigFile = string.Format("{0}\\UserConfig.xml", SkyRegUser.GlobalPathFile);
             SkyRegUser.LocalMachineName = Environment.MachineName;
             Version curVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            labAppVersion.Text = $"wersja {curVersion}";
-            SkyRegUser.AppVer = labAppVersion.Text;
+            Text_AppVersion.Text = $"wersja {curVersion}";
+            SkyRegUser.AppVer = Text_AppVersion.Text;
 
             StartLoading();
         }
@@ -73,7 +73,7 @@ namespace SkyReg.Forms.SplashScreen
 
                 Thread.Sleep(850);
 
-                CreateSkyregFolder();
+                CreateFolder();
                 bgw.ReportProgress(75);
 
                 if (File.Exists(SkyRegUser.DatabaseConfigFile))
@@ -89,8 +89,6 @@ namespace SkyReg.Forms.SplashScreen
                         deserializer = new XmlSerializer(ConfigSettings.GetType());
                         ConfigSettings = ((DatabaseAccess)deserializer.Deserialize(tr));
                         tr.Close();
-                        ConfigSettings.Password = ConfigSettings.Password.DecryptString();
-                        ConfigSettings.User = ConfigSettings.User.DecryptString();
                         new DatabaseConfig(ConfigSettings);
                         SkyRegUser.IsDbExists = true;
                     }
@@ -108,7 +106,7 @@ namespace SkyReg.Forms.SplashScreen
 
         }
 
-        private void CreateSkyregFolder()
+        private void CreateFolder()
         {
             if (!Directory.Exists(SkyRegUser.GlobalPathFile))
             {

@@ -30,65 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.kryptonPanelEx1 = new AC.ExtendedRenderer.Toolkit.KryptonPanelEx();
-            this.Btn_Close = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Btn_Login = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cMSDatabase = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDatabaseCfg = new System.Windows.Forms.ToolStripMenuItem();
             this.RegisterUser = new System.Windows.Forms.ToolStripMenuItem();
             this.StyleManager = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonPanelEx2 = new AC.ExtendedRenderer.Toolkit.KryptonPanelEx();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Txt_Pasword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Txt_Login = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonPanelEx1.SuspendLayout();
+            this.kryptonPanelEx1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx();
+            this.kryptonPanelEx2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx();
+            this.btn_Close = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.btn_Login = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.kryptonBorderedLabel1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
+            this.kryptonBorderedLabel2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
+            this.Txt_Login = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
+            this.Txt_Password = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.cMSDatabase.SuspendLayout();
+            this.kryptonPanelEx1.SuspendLayout();
             this.kryptonPanelEx2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // kryptonPanelEx1
-            // 
-            this.kryptonPanelEx1.Controls.Add(this.Btn_Close);
-            this.kryptonPanelEx1.Controls.Add(this.Btn_Login);
-            this.kryptonPanelEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanelEx1.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.kryptonPanelEx1.GradientToogleColors = false;
-            this.kryptonPanelEx1.GradientUseBlend = false;
-            this.kryptonPanelEx1.Image = null;
-            this.kryptonPanelEx1.ImageLocation = new System.Drawing.Point(4, 4);
-            this.kryptonPanelEx1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.kryptonPanelEx1.Location = new System.Drawing.Point(0, 142);
-            this.kryptonPanelEx1.Name = "kryptonPanelEx1";
-            this.kryptonPanelEx1.PersistentColors = false;
-            this.kryptonPanelEx1.Size = new System.Drawing.Size(431, 37);
-            this.kryptonPanelEx1.TabIndex = 0;
-            // 
-            // Btn_Close
-            // 
-            this.Btn_Close.Location = new System.Drawing.Point(305, 6);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Btn_Close.Size = new System.Drawing.Size(92, 25);
-            this.Btn_Close.TabIndex = 1;
-            this.Btn_Close.Values.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Close.Values.Image")));
-            this.Btn_Close.Values.Text = "Zamknij";
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // Btn_Login
-            // 
-            this.Btn_Login.Location = new System.Drawing.Point(206, 6);
-            this.Btn_Login.Name = "Btn_Login";
-            this.Btn_Login.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Btn_Login.Size = new System.Drawing.Size(93, 25);
-            this.Btn_Login.TabIndex = 0;
-            this.Btn_Login.Values.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Login.Values.Image")));
-            this.Btn_Login.Values.Text = "Zaloguj się";
-            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // cMSDatabase
             // 
@@ -123,90 +83,135 @@
             // 
             this.StyleManager.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
             // 
-            // kryptonPalette1
+            // kryptonManager1
             // 
-            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
+            // 
+            // kryptonPanelEx1
+            // 
+            this.kryptonPanelEx1.Controls.Add(this.Txt_Password);
+            this.kryptonPanelEx1.Controls.Add(this.Txt_Login);
+            this.kryptonPanelEx1.Controls.Add(this.kryptonBorderedLabel2);
+            this.kryptonPanelEx1.Controls.Add(this.kryptonBorderedLabel1);
+            this.kryptonPanelEx1.Controls.Add(this.kryptonPanelEx2);
+            this.kryptonPanelEx1.Controls.Add(this.pictureBox2);
+            this.kryptonPanelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanelEx1.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.kryptonPanelEx1.GradientToogleColours = false;
+            this.kryptonPanelEx1.GradientUseBlend = false;
+            this.kryptonPanelEx1.Image = null;
+            this.kryptonPanelEx1.ImageLocation = new System.Drawing.Point(4, 4);
+            this.kryptonPanelEx1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanelEx1.Name = "kryptonPanelEx1";
+            this.kryptonPanelEx1.PersistentColours = false;
+            this.kryptonPanelEx1.Size = new System.Drawing.Size(431, 179);
+            this.kryptonPanelEx1.TabIndex = 1;
             // 
             // kryptonPanelEx2
             // 
-            this.kryptonPanelEx2.Controls.Add(this.kryptonLabel1);
-            this.kryptonPanelEx2.Controls.Add(this.kryptonLabel3);
-            this.kryptonPanelEx2.Controls.Add(this.pictureBox2);
-            this.kryptonPanelEx2.Controls.Add(this.Txt_Pasword);
-            this.kryptonPanelEx2.Controls.Add(this.Txt_Login);
-            this.kryptonPanelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanelEx2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.kryptonPanelEx2.Controls.Add(this.btn_Close);
+            this.kryptonPanelEx2.Controls.Add(this.btn_Login);
+            this.kryptonPanelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanelEx2.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.kryptonPanelEx2.GradientToogleColors = true;
+            this.kryptonPanelEx2.GradientToogleColours = false;
             this.kryptonPanelEx2.GradientUseBlend = false;
             this.kryptonPanelEx2.Image = null;
             this.kryptonPanelEx2.ImageLocation = new System.Drawing.Point(4, 4);
-            this.kryptonPanelEx2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanelEx2.Location = new System.Drawing.Point(0, 141);
             this.kryptonPanelEx2.Name = "kryptonPanelEx2";
-            this.kryptonPanelEx2.PersistentColors = false;
-            this.kryptonPanelEx2.Size = new System.Drawing.Size(431, 142);
-            this.kryptonPanelEx2.TabIndex = 1;
+            this.kryptonPanelEx2.PersistentColours = false;
+            this.kryptonPanelEx2.Size = new System.Drawing.Size(431, 38);
+            this.kryptonPanelEx2.TabIndex = 25;
             // 
-            // kryptonLabel1
+            // btn_Close
             // 
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(187, 67);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(42, 17);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel1.TabIndex = 23;
-            this.kryptonLabel1.Values.Text = "Hasło:";
+            this.btn_Close.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
+            this.btn_Close.Location = new System.Drawing.Point(309, 7);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.btn_Close.Size = new System.Drawing.Size(117, 26);
+            this.btn_Close.TabIndex = 0;
+            this.btn_Close.Values.Image = global::BoutiqueShopp.Properties.Resources.iconfinder_Delete_132746;
+            this.btn_Close.Values.Text = "Zamknij";
+            this.btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
-            // kryptonLabel3
+            // btn_Login
             // 
-            this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(187, 44);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(41, 17);
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kryptonLabel3.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel3.TabIndex = 22;
-            this.kryptonLabel3.Values.Text = "Login:";
+            this.btn_Login.Location = new System.Drawing.Point(192, 7);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(109, 26);
+            this.btn_Login.TabIndex = 0;
+            this.btn_Login.Values.Image = global::BoutiqueShopp.Properties.Resources.iconfinder_Apply_132742;
+            this.btn_Login.Values.Text = "Zaloguj się";
+            this.btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.ContextMenuStrip = this.cMSDatabase;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(169, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
-            // Txt_Pasword
+            // kryptonBorderedLabel1
             // 
-            this.Txt_Pasword.Location = new System.Drawing.Point(235, 68);
-            this.Txt_Pasword.Name = "Txt_Pasword";
-            this.Txt_Pasword.PasswordChar = '●';
-            this.Txt_Pasword.Size = new System.Drawing.Size(162, 23);
-            this.Txt_Pasword.TabIndex = 1;
-            this.Txt_Pasword.UseSystemPasswordChar = true;
-            this.Txt_Pasword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Pasword_KeyDown);
+            this.kryptonBorderedLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonBorderedLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.kryptonBorderedLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonBorderedLabel1.Location = new System.Drawing.Point(197, 46);
+            this.kryptonBorderedLabel1.Name = "kryptonBorderedLabel1";
+            this.kryptonBorderedLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office365Black;
+            this.kryptonBorderedLabel1.Size = new System.Drawing.Size(54, 22);
+            this.kryptonBorderedLabel1.TabIndex = 26;
+            this.kryptonBorderedLabel1.Values.Text = "Login:";
+            // 
+            // kryptonBorderedLabel2
+            // 
+            this.kryptonBorderedLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonBorderedLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.kryptonBorderedLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonBorderedLabel2.Location = new System.Drawing.Point(197, 74);
+            this.kryptonBorderedLabel2.Name = "kryptonBorderedLabel2";
+            this.kryptonBorderedLabel2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.kryptonBorderedLabel2.Size = new System.Drawing.Size(54, 22);
+            this.kryptonBorderedLabel2.TabIndex = 26;
+            this.kryptonBorderedLabel2.Values.Text = "Hasło:";
             // 
             // Txt_Login
             // 
-            this.Txt_Login.Location = new System.Drawing.Point(235, 42);
+            this.Txt_Login.DrawPrompt = true;
+            this.Txt_Login.FocusSelect = true;
+            this.Txt_Login.Location = new System.Drawing.Point(257, 46);
             this.Txt_Login.Name = "Txt_Login";
-            this.Txt_Login.Size = new System.Drawing.Size(162, 23);
-            this.Txt_Login.TabIndex = 0;
+            this.Txt_Login.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.Txt_Login.PromptText = "";
+            this.Txt_Login.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Txt_Login.Size = new System.Drawing.Size(143, 20);
+            this.Txt_Login.TabIndex = 27;
             // 
-            // kryptonManager1
+            // Txt_Password
             // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
+            this.Txt_Password.DrawPrompt = true;
+            this.Txt_Password.FocusSelect = true;
+            this.Txt_Password.Location = new System.Drawing.Point(257, 74);
+            this.Txt_Password.Name = "Txt_Password";
+            this.Txt_Password.PasswordChar = '*';
+            this.Txt_Password.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.Txt_Password.PromptText = "";
+            this.Txt_Password.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Txt_Password.Size = new System.Drawing.Size(143, 20);
+            this.Txt_Password.TabIndex = 27;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 179);
-            this.Controls.Add(this.kryptonPanelEx2);
             this.Controls.Add(this.kryptonPanelEx1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -216,31 +221,29 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie";
             this.Shown += new System.EventHandler(this.FrmLogin_Shown);
-            this.kryptonPanelEx1.ResumeLayout(false);
             this.cMSDatabase.ResumeLayout(false);
+            this.kryptonPanelEx1.ResumeLayout(false);
+            this.kryptonPanelEx1.PerformLayout();
             this.kryptonPanelEx2.ResumeLayout(false);
-            this.kryptonPanelEx2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private AC.ExtendedRenderer.Toolkit.KryptonPanelEx kryptonPanelEx1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton Btn_Close;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton Btn_Login;
         private ComponentFactory.Krypton.Toolkit.KryptonManager StyleManager;
         private System.Windows.Forms.ContextMenuStrip cMSDatabase;
         private System.Windows.Forms.ToolStripMenuItem btnDatabaseCfg;
         private System.Windows.Forms.ToolStripMenuItem RegisterUser;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private AC.ExtendedRenderer.Toolkit.KryptonPanelEx kryptonPanelEx2;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox Txt_Pasword;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox Txt_Login;
         public ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx kryptonPanelEx1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx kryptonPanelEx2;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Close;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Login;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel kryptonBorderedLabel2;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel kryptonBorderedLabel1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox Txt_Login;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox Txt_Password;
     }
 }

@@ -5,32 +5,8 @@ namespace SkyReg.Common
 {
     public class DatabaseAccess
     {
-        private string _serverName;
-        private string _databaseName;
-        private string _user;
-        private string _password;
-
-        public string ServerName
-        {
-            get { return _serverName; }
-            set { _serverName = value; }
-        }
-        public string DataBaseName
-        {
-            get { return _databaseName; }
-            set { _databaseName = value; }
-        }
-        public string User
-        {
-            get { return _user; }
-            set { _user = value; }
-        }
-        public string Password
-        {
-            get { return _password.DecryptString(); }
-            set { _password = value.EncryptString(); }
-        }
-
+        public string ServerName { get; set; }
+        public string DataBaseName { get; set; } = "BoutiqueShopp";
     }
 
     public sealed class DatabaseConfig
@@ -79,8 +55,6 @@ namespace SkyReg.Common
                 if (connBuilder == null)
                 {
                     connBuilder = new SqlConnectionStringBuilder();
-                    connBuilder.UserID = _databaseAccess.User;
-                    connBuilder.Password = _databaseAccess.Password;
                     connBuilder.InitialCatalog = _databaseAccess.DataBaseName;
                     connBuilder.DataSource = _databaseAccess.ServerName;
                     return connBuilder.ConnectionString;

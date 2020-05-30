@@ -117,54 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Btn_Close.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="Btn_Login.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
-  </metadata>
-  <metadata name="Btn_Close.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Btn_Close.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAwxJREFUOE91
-        k1lIlFEcxZUMgqKFMqggUDR6CXopQiqQCCz0IUptqnGpmRyX1BAFH1ITZppxNHMbl1Sc0Rlxw3qoyFFB
-        xiUf2sYtm3poF3OpbHEpft3vQoZED+flfvf/+845916vs2qVPjzyJP9TxOlTnIs6g0Z7Hl38RXQJcWjj
-        LnApOTEf8PFSNjkcDvR6PZmZmSQnJ6PValGr1ahUKmZnp/n8eZavX+f4/v2b1PTMFNlXr4h5fCWgra2N
-        /Px8srOzSU9PJykpCY1GQ0xMjATMzX1hfv4HS0uLQkssLCxQdbNCAfhLQEdHB2VlZZhMJrKysiREcaLT
-        6QRgRvz9ixwaKy6m8/BhFhcXsdVbFcAuCXA6ndTU1FBaWiohipOMjAxSU1P59GmGORFhQMTqPXGCVl9f
-        poeHsJmMPLdYgiSgq6uLuro6ysvLKSwsxGAwSCcKZOrNK+4fPMjD2FimGhvp3LuXe7t3c9vfD7u397wE
-        dHd3Y7PZqKqqoqioCKPRSE5ODlkJCdzy88Mt/v5BrE1cv86kiDppsfBR7BWAn8uAhoYGqqurKSkpwWw2
-        kydKdGzaxEhUFK/i4/GEhOA5fhxPaCiesDAmCgpwrFr1F9Ao7NXW1mIR9ALx0bp1K3379/MyIoKRPXsY
-        Cgzk6fbtPN64EfeOHbwWJTt8fP4CmpqasFqtVFRUyB7MaWnY1q+nVwyPCdCjNWt4tG6d1GOx/kIUuiJC
-        c3Mz9fX1sodicVzKaRjExWoNDKAzIIDRAwcYDw5mOCgItyjVfegQdi+vXysAdrtdHqdyJxQXubm5aKKj
-        cB4L4Y6wPbRvn2KbWzt3Yt+ymea1ax+sAPyJUVlZSUpKCqY8I0/cT3j77g29SYm0ilKbRIR3799yzWhQ
-        LtK2ZUBLSwvt7e3oDXoKCs0MDPYxPOpmbHyEZ89HGfeM0SeG7h49wuizYdLSLyuADRLgcrlEeeUUl9yg
-        u8eJq7+H/gcu+gcV9f6jvoEeYi9EK4DV8jnHJ+rks41UhXP6TMQKqc5G/iNlPTpWLTLg/RuceJnOUm+a
-        sQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="Btn_Login.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
-  </metadata>
-  <data name="Btn_Login.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAbRJREFUOE+l
-        0M1L23AYB/CAsPv+Ba9Cj8IQhjKq04p01q5DEQYrvoC0u3rYtQfZZEXB4WQIQ1HLNmSvih6Kh2iVedjG
-        xthhw7xopVKTpiFxyW/fpyTBFANuO3zg+zx58oWEY4z9lwuXf4OLbx7UG4A1OALZyXfAu/EVxNYPXM0w
-        m/5Y0qcE4/dK2WbLZdumfB87PMtCiG59BbfeC67ZB18r5oxkWmPbx1rvB0EhqZ3j6vyRaT38UTFxk6Vb
-        X0HPa4EkR/gTfeKnYUXfigrN0OCgzEMWQsAN5oW7XkHkpUD48W9Va3CzqCEnnV2g/g2Bwb1aQeeKeCWS
-        k5Tx7waL5ESFZqC9J/5GZAGGuPYFsaFjUVRSX3QbWQba+URzEgswwd2Ylwg/vF+xul8UNeRRZxeo67nM
-        4FHtE1rnJJKMvivpAwXVansmKZhH4aojDZ8gA43AhZ8ePvZ+4vUnkmuyb+vUvI2S8FKx2jonq6QdObGn
-        Wr35soGbDN26L9cKWqZlVxNM3lw90WMF9SzxWbNJbFc963hVquJZBhrp1ldwLSvXi8Mq/HJQjoJ34ys4
-        P/yLC5eXx7g/kIaXdPA6+q0AAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="cMSDatabase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>832, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnDatabaseCfg.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABn9JREFUSEuN
@@ -290,26 +246,8 @@
   <metadata name="StyleManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>706, 17</value>
   </metadata>
-  <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>958, 17</value>
-  </metadata>
-  <metadata name="kryptonLabel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>226, 17</value>
-  </metadata>
-  <metadata name="kryptonLabel3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 17</value>
-  </metadata>
-  <metadata name="Txt_Pasword.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>484, 17</value>
-  </metadata>
-  <metadata name="Txt_Login.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
-  <metadata name="kryptonLabel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>226, 17</value>
-  </metadata>
-  <metadata name="kryptonLabel3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 17</value>
+  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>976, 17</value>
   </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -594,15 +532,6 @@
         Bxwiv1u3bnV23333gj333LNOv379qh84fHjuoeMnZIzNZm6En/0fLXlCvymJIJgAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Txt_Pasword.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>484, 17</value>
-  </metadata>
-  <metadata name="Txt_Login.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
-  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1096, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAfuAEAZgAAAICAAAABACAAKAgBAIW4AQBAQAAAAQAgAChCAACtwAIAMDAAAAEA

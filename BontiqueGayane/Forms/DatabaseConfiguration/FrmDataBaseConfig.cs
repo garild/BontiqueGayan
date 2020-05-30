@@ -1,14 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SkyReg.Common;
-using SkyReg.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
@@ -18,165 +11,136 @@ namespace SkyReg.Forms.DatabaseConfiguration
 {
     public partial class FrmDataBaseConfig : KryptonForm
     {
-        //    #region Pola Prywatne
+        #region Pola Prywatne
 
-        //    private ErrorProvider validateControl = new ErrorProvider();
-        //    public static DatabaseAccess ConfigSettings = new DatabaseAccess();
-        //    private bool DbResult = false;
-        //    private BackgroundWorker bgw;
-        //    #endregion
+        private ErrorProvider validateControl = new ErrorProvider();
+        public static DatabaseAccess ConfigSettings = new DatabaseAccess();
+        private string _dackPackFilePath = null;
+        private OpenFileDialog openFileDialog;
+        #endregion
 
-        //    #region Konstruktor
+        #region Konstruktor
 
-        //    public FrmDataBaseConfig()
-        //    {
-        //        InitializeComponent();
+        public FrmDataBaseConfig()
+        {
+            InitializeComponent();
 
-
-
-        //        LoadDBSettings();
-        //    }
-
-        //    #endregion
-
-        //    #region Zdarzenia
-
-        //    private void btnSaveCfg_Click(object sender, EventArgs e)
-        //    {
-        //        SaveConfig();
-        //    }
-
-        //    private void btnClose_Click(object sender, EventArgs e)
-        //    {
-        //        this.Close();
-        //    }
-
-        //    #endregion
-
-        //    #region Metody prywatne
-
-        //    public void LoadDBSettings()
-        //    {
-        //        if (!File.Exists(SkyRegUser.DatabaseConfigFile))
-        //        {
-        //            Directory.CreateDirectory(SkyRegUser.GlobalPathFile);
-        //        }
-        //        if (File.Exists(SkyRegUser.DatabaseConfigFile))
-        //        {
-        //            TextReader tr = new StreamReader(SkyRegUser.DatabaseConfigFile);
-
-        //            XmlDocument doc = new XmlDocument();
-        //            doc.Load(SkyRegUser.DatabaseConfigFile);
-        //            XmlSerializer deserializer;
-
-        //            //odczyt ustawień z nowej wersji pliku
-        //            ConfigSettings = new DatabaseAccess();
-        //            deserializer = new XmlSerializer(ConfigSettings.GetType());
-
-        //            ConfigSettings = ((DatabaseAccess)deserializer.Deserialize(tr));
-        //            string password = ConfigSettings.Password.DecryptString();
-        //            string login = ConfigSettings.User.DecryptString();
-        //            txtDatabase.Text = ConfigSettings.DataBaseName;
-        //            txtServer.Text = ConfigSettings.ServerName;
-        //            txtUserName.Text = login;
-        //            txtPassword.Text = password;
-        //            tr.Close();
-
-        //            new DatabaseConfig(ConfigSettings);
-        //            SkyRegUser.IsDbExists = true;
-        //        }
-        //        else
-        //        {
-        //            txtServer.Text = string.Format("{0}\\SQLEXPRESS", Environment.MachineName);
-        //        }
-        //    }
-
-        //    private bool ValidateControls()
-        //    {
-
-        //        bool result = true;
-        //        validateControl.Clear();
-        //        validateControl.BlinkRate = 250;
-        //        if (string.IsNullOrEmpty(txtServer.Text))
-        //        {
-        //            validateControl.SetError(txtServer, "!");
-        //            result = false;
-        //        }
-        //        if (string.IsNullOrEmpty(txtDatabase.Text))
-        //        {
-        //            validateControl.SetError(txtDatabase, "!");
-        //            result = false;
-        //        }
-        //        if (string.IsNullOrEmpty(txtUserName.Text))
-        //        {
-        //            validateControl.SetError(txtUserName, "!");
-        //            result = false;
-        //        }
-        //        if (string.IsNullOrEmpty(txtPassword.Text))
-        //        {
-        //            validateControl.SetError(txtPassword, "!");
-        //            result = false;
-        //        }
-
-        //        return result;
-        //    }
-
-        //    private void SaveConfig()
-        //    {
-        //        using (TextWriter TW = new StreamWriter(SkyRegUser.DatabaseConfigFile, false, Encoding.GetEncoding("windows-1250")))
-        //        {
-        //            XmlSerializer serializer = new XmlSerializer(typeof(DatabaseAccess));
-        //            string password = txtPassword.Text;
-        //            string login = txtUserName.Text;
-        //            ConfigSettings.DataBaseName = txtDatabase.Text.Trim();
-        //            ConfigSettings.ServerName = txtServer.Text.Trim();
-        //            ConfigSettings.User = login.EncryptString();
-        //            ConfigSettings.Password = password.EncryptString();
-
-        //            new DatabaseConfig(ConfigSettings);
-
-        //            serializer.Serialize(TW, ConfigSettings);
-        //            TW.Close();
-
-        //            ConfigSettings.User = login;
-        //            ConfigSettings.Password = password;
-        //            new DatabaseConfig(ConfigSettings);
-        //            SkyRegUser.IsDbExists = true;
-        //            KryptonMessageBox.Show("Plik konfiguracyjny został zapisany!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-
-        //    }
-
-        //    #endregion
-
-        //    #region Baza Danych SQL - Generowanie Bazy itp.
-
-        //    private void btGenerateDataBase_Click(object sender, EventArgs e)
-        //    {
-        //        progresBarDB.Maximum = 100;
-
-        //        if (!ValidateControls()) return;
-        //        bgw = new BackgroundWorker();
-        //        bgw.WorkerReportsProgress = true;
-        //        bgw.DoWork += Bgw_DoWork;
-        //        bgw.ProgressChanged += Bgw_ProgressChanged;
-        //        bgw.RunWorkerAsync();
-
-        //    }
-
-        //    private void Bgw_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        //    {
-        //        progresBarDB.Value = e.ProgressPercentage;
-        //    }
-
-        //    private void Bgw_DoWork(object sender, DoWorkEventArgs e)
-        //    {
-        //        var connectionString = $"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog={ConfigSettings.DataBaseName};Integrated Security=True;Connect Timeout=0;Encrypt=False;TrustServerCertificate=True;";
-        //        DatabaseDeploy.Deploy(ConfigSettings.DataBaseName, connectionString);
-        //    }
-
-        //    #endregion
+            LoadDBSettings();
+        }
 
 
+        #endregion
+
+        #region Zdarzenia
+
+        private void btn_Generate_Click(object sender, System.EventArgs e)
+        {
+            if (string.IsNullOrEmpty(_dackPackFilePath))
+            {
+                KryptonMessageBox.Show("Wskać plik bazy danych!");
+                return;
+            }
+
+            ValidateControls();
+            
+            DatabaseDeploy.Deploy(_dackPackFilePath, ConfigSettings.DataBaseName);
+
+            SaveConfig();
+        }
+
+        private void btn_FileDialog_Click(object sender, System.EventArgs e)
+        {
+            openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            _dackPackFilePath = openFileDialog.FileName;
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSaveCfg_Click(object sender, EventArgs e)
+        {
+            SaveConfig();
+        }
+
+
+        #endregion
+
+        #region Metody prywatne
+
+        public void LoadDBSettings()
+        {
+            if (!File.Exists(SkyRegUser.DatabaseConfigFile))
+            {
+                Directory.CreateDirectory(SkyRegUser.GlobalPathFile);
+            }
+            if (File.Exists(SkyRegUser.DatabaseConfigFile))
+            {
+                TextReader tr = new StreamReader(SkyRegUser.DatabaseConfigFile);
+
+                XmlDocument doc = new XmlDocument();
+                doc.Load(SkyRegUser.DatabaseConfigFile);
+                XmlSerializer deserializer;
+
+                //odczyt ustawień z nowej wersji pliku
+                ConfigSettings = new DatabaseAccess();
+                deserializer = new XmlSerializer(ConfigSettings.GetType());
+
+                ConfigSettings = ((DatabaseAccess)deserializer.Deserialize(tr));
+                Txt_DatabaseName.Text = ConfigSettings.DataBaseName;
+                Txt_ServerName.Text = ConfigSettings.ServerName;
+                tr.Close();
+
+                new DatabaseConfig(ConfigSettings);
+                SkyRegUser.IsDbExists = true;
+            }
+            else
+            {
+                Txt_ServerName.Text = Environment.MachineName;
+            }
+        }
+
+        private bool ValidateControls()
+        {
+            bool result = true;
+            validateControl.Clear();
+            validateControl.BlinkRate = 250;
+            if (string.IsNullOrEmpty(Txt_ServerName.Text))
+            {
+                validateControl.SetError(Txt_ServerName, "!");
+                result = false;
+            }
+            if (string.IsNullOrEmpty(Txt_DatabaseName.Text))
+            {
+                validateControl.SetError(Txt_DatabaseName, "!");
+                result = false;
+            }
+
+            return result;
+        }
+
+        private void SaveConfig()
+        {
+            using (TextWriter TW = new StreamWriter(SkyRegUser.DatabaseConfigFile, false, Encoding.GetEncoding("windows-1250")))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(DatabaseAccess));
+                ConfigSettings.DataBaseName = Txt_DatabaseName.Text.Trim();
+                ConfigSettings.ServerName = Txt_ServerName.Text.Trim();
+
+                new DatabaseConfig(ConfigSettings);
+
+                serializer.Serialize(TW, ConfigSettings);
+                TW.Close();
+
+                new DatabaseConfig(ConfigSettings);
+                SkyRegUser.IsDbExists = true;
+                KryptonMessageBox.Show("Plik konfiguracyjny został zapisany!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        #endregion
     }
 }

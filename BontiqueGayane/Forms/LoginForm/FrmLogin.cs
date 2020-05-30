@@ -12,6 +12,7 @@ using SkyReg.Forms.DatabaseConfiguration;
 using SkyReg.Common.Extensions;
 using SkyReg.Common;
 using Database;
+using SkyReg.Forms.RegisterForm;
 
 namespace SkyReg.MainForm
 {
@@ -31,7 +32,7 @@ namespace SkyReg.MainForm
         private void AllowDbConfig()
         {
             if (Txt_Login.Text.ToLower() == "@ps")
-                if (Txt_Pasword.Text.ToLower() == "barev")
+                if (Txt_Password.Text.ToLower() == "barev")
                     btnDatabaseCfg.Visible = true;
                 else
                     btnDatabaseCfg.Visible = false;
@@ -52,9 +53,9 @@ namespace SkyReg.MainForm
                 validateControl.SetError(Txt_Login, "!");
                 result = false;
             }
-            if (!Txt_Pasword.Text.HasValue())
+            if (!Txt_Password.Text.HasValue())
             {
-                validateControl.SetError(Txt_Pasword, "!");
+                validateControl.SetError(Txt_Password, "!");
                 result = false;
             }
 
@@ -77,8 +78,6 @@ namespace SkyReg.MainForm
                     deserializer = new XmlSerializer(ConfigSettings.GetType());
                     ConfigSettings = ((DatabaseAccess)deserializer.Deserialize(tr));
                     tr.Close();
-                    ConfigSettings.Password = ConfigSettings.Password.DecryptString();
-                    ConfigSettings.User = ConfigSettings.User.DecryptString();
                     new DatabaseConfig(ConfigSettings);
                 }
 
@@ -117,7 +116,7 @@ namespace SkyReg.MainForm
         private void LogIn()
         {
             string login = Txt_Login.Text.ToLower();
-            string password = Txt_Pasword.Text;
+            string password = Txt_Password.Text;
 
             try
             {
@@ -169,7 +168,7 @@ namespace SkyReg.MainForm
             if (string.IsNullOrEmpty(Txt_Login.Text))
                 Txt_Login.Focus();
             else
-                Txt_Pasword.Focus();
+                Txt_Password.Focus();
         }
 
         private void Txt_Pasword_KeyDown(object sender, KeyEventArgs e)
@@ -195,7 +194,6 @@ namespace SkyReg.MainForm
             {
                 Directory.CreateDirectory(SkyRegUser.GlobalPathFile);
             }
-
         }
 
         private void btnDatabaseCfg_Click(object sender, EventArgs e)
@@ -205,10 +203,12 @@ namespace SkyReg.MainForm
         }
 
         private FrmDataBaseConfig frmDataBaseConfig = null;
+        private FrmRegistration frmRegistration = null;
 
         private void RegisterUser_Click(object sender, EventArgs e)
         {
-
+            frmRegistration = FormsOpened<FrmRegistration>.IsShowDialog(frmRegistration);
+            frmRegistration.ShowDialog();
         }
     }
 }

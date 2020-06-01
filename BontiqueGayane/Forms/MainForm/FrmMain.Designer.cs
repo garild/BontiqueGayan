@@ -41,11 +41,11 @@
             this.tstrComputerName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_MyAccount = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.btn_Settings = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.btn_CustomerList = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
+            this.btn_Products = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonUACElevatedButton1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
-            this.kryptonUACElevatedButton3 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
-            this.kryptonUACElevatedButton4 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
-            this.kryptonUACElevatedButton2 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -136,64 +136,63 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.kryptonUACElevatedButton4);
-            this.panel1.Controls.Add(this.kryptonUACElevatedButton3);
-            this.panel1.Controls.Add(this.kryptonUACElevatedButton2);
-            this.panel1.Controls.Add(this.kryptonUACElevatedButton1);
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_MyAccount);
+            this.panel1.Controls.Add(this.btn_Settings);
+            this.panel1.Controls.Add(this.btn_CustomerList);
+            this.panel1.Controls.Add(this.btn_Products);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 789);
             this.panel1.TabIndex = 3;
             // 
+            // btn_MyAccount
+            // 
+            this.btn_MyAccount.Location = new System.Drawing.Point(0, 158);
+            this.btn_MyAccount.Name = "btn_MyAccount";
+            this.btn_MyAccount.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.btn_MyAccount.Size = new System.Drawing.Size(247, 56);
+            this.btn_MyAccount.TabIndex = 5;
+            this.btn_MyAccount.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_MyAccount.Values.Image")));
+            this.btn_MyAccount.Values.Text = "         Moje Konto";
+            // 
+            // btn_Settings
+            // 
+            this.btn_Settings.Location = new System.Drawing.Point(0, 108);
+            this.btn_Settings.Name = "btn_Settings";
+            this.btn_Settings.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.btn_Settings.Size = new System.Drawing.Size(247, 56);
+            this.btn_Settings.TabIndex = 5;
+            this.btn_Settings.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_Settings.Values.Image")));
+            this.btn_Settings.Values.Text = "  Ustawienia";
+            // 
+            // btn_CustomerList
+            // 
+            this.btn_CustomerList.Location = new System.Drawing.Point(0, 55);
+            this.btn_CustomerList.Name = "btn_CustomerList";
+            this.btn_CustomerList.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.btn_CustomerList.Size = new System.Drawing.Size(247, 56);
+            this.btn_CustomerList.TabIndex = 5;
+            this.btn_CustomerList.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_CustomerList.Values.Image")));
+            this.btn_CustomerList.Values.Text = "         Lista Klientów";
+            this.btn_CustomerList.Click += new System.EventHandler(this.btn_CustomerList_Click);
+            // 
+            // btn_Products
+            // 
+            this.btn_Products.Location = new System.Drawing.Point(0, 1);
+            this.btn_Products.Name = "btn_Products";
+            this.btn_Products.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.btn_Products.Size = new System.Drawing.Size(247, 56);
+            this.btn_Products.TabIndex = 5;
+            this.btn_Products.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_Products.Values.Image")));
+            this.btn_Products.Values.Text = "  Produkty";
+            this.btn_Products.Click += new System.EventHandler(this.btn_Products_Click);
+            // 
             // kryptonManager1
             // 
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
-            // 
-            // kryptonUACElevatedButton1
-            // 
-            this.kryptonUACElevatedButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonUACElevatedButton1.Location = new System.Drawing.Point(0, 1);
-            this.kryptonUACElevatedButton1.Name = "kryptonUACElevatedButton1";
-            this.kryptonUACElevatedButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonUACElevatedButton1.Size = new System.Drawing.Size(247, 70);
-            this.kryptonUACElevatedButton1.TabIndex = 5;
-            this.kryptonUACElevatedButton1.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton1.Values.Image")));
-            this.kryptonUACElevatedButton1.Values.Text = "kryptonUACElevatedButton1";
-            // 
-            // kryptonUACElevatedButton3
-            // 
-            this.kryptonUACElevatedButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonUACElevatedButton3.Location = new System.Drawing.Point(0, 134);
-            this.kryptonUACElevatedButton3.Name = "kryptonUACElevatedButton3";
-            this.kryptonUACElevatedButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonUACElevatedButton3.Size = new System.Drawing.Size(247, 70);
-            this.kryptonUACElevatedButton3.TabIndex = 5;
-            this.kryptonUACElevatedButton3.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton3.Values.Image")));
-            this.kryptonUACElevatedButton3.Values.Text = "kryptonUACElevatedButton1";
-            // 
-            // kryptonUACElevatedButton4
-            // 
-            this.kryptonUACElevatedButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonUACElevatedButton4.Location = new System.Drawing.Point(0, 200);
-            this.kryptonUACElevatedButton4.Name = "kryptonUACElevatedButton4";
-            this.kryptonUACElevatedButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonUACElevatedButton4.Size = new System.Drawing.Size(247, 70);
-            this.kryptonUACElevatedButton4.TabIndex = 5;
-            this.kryptonUACElevatedButton4.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton4.Values.Image")));
-            this.kryptonUACElevatedButton4.Values.Text = "kryptonUACElevatedButton1";
-            // 
-            // kryptonUACElevatedButton2
-            // 
-            this.kryptonUACElevatedButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonUACElevatedButton2.Location = new System.Drawing.Point(0, 68);
-            this.kryptonUACElevatedButton2.Name = "kryptonUACElevatedButton2";
-            this.kryptonUACElevatedButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonUACElevatedButton2.Size = new System.Drawing.Size(247, 70);
-            this.kryptonUACElevatedButton2.TabIndex = 5;
-            this.kryptonUACElevatedButton2.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton2.Values.Image")));
-            this.kryptonUACElevatedButton2.Values.Text = "kryptonUACElevatedButton1";
             // 
             // FrmMain
             // 
@@ -230,10 +229,10 @@
         private System.Windows.Forms.ToolStripStatusLabel tstrComputerName;
         private System.Windows.Forms.Panel panel1;
         public ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton1;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton4;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton3;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACElevatedButton2;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_MyAccount;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Settings;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_CustomerList;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Products;
     }
 }
 

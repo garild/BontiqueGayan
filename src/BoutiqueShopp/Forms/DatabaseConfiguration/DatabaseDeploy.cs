@@ -5,7 +5,6 @@ namespace SkyReg.Forms.DatabaseConfiguration
 {
     public static class DatabaseDeploy
     {
-        private static bool IsErrorAtDeyploment;
         public static void Deploy(string connectionString,string dacpacFileName,string databaseName)
         {
             try
@@ -31,7 +30,7 @@ namespace SkyReg.Forms.DatabaseConfiguration
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -42,12 +41,10 @@ namespace SkyReg.Forms.DatabaseConfiguration
 
         private static void DacServices_Message(object sender, DacMessageEventArgs e)
         {
-            IsErrorAtDeyploment = false;
             if (e.Message.MessageType == DacMessageType.Error)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(e.Message.Message);
-                IsErrorAtDeyploment = true;
             }
             if (e.Message.MessageType == DacMessageType.Warning)
             {

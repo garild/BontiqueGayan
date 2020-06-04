@@ -13,9 +13,7 @@ namespace SkyReg.Forms.SplashScreen
     public partial class SplashScreen : KryptonForm
     {
         public bool DatabaseExists = false;
-        private object _lock = new object();
         private BackgroundWorker bgw = new BackgroundWorker();
-        private FrmDataBaseConfig frmDataBaseConfig = null;
         public SplashScreen()
         {
             InitializeComponent();

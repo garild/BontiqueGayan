@@ -173,7 +173,7 @@
     <Compile Include="Common\DatabaseAccess.cs" />
     <Compile Include="Common\Extensions\FormsOpened.cs" />
     <Compile Include="Common\Extensions\PrimitiveTypeExtensions.cs" />
-    <Compile Include="Common\Helper\BaseModel.cs" />
+    <Compile Include="Common\Helper\LoggedUser.cs" />
     <Compile Include="Common\Helper\GlobalApplicationSettings.cs" />
     <Compile Include="Common\Security.cs" />
     <Compile Include="Domain\Customers.cs" />
@@ -400,6 +400,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Database\BoutiqueShopp.sqlproj">
+      <Project>{1668f1b9-be00-4d58-8be7-f4b204a51148}</Project>
+      <Name>BoutiqueShopp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

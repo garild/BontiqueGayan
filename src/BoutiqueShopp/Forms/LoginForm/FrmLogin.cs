@@ -3,7 +3,6 @@ using System;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using System.Xml.Serialization;
 using SkyReg.Extensions;
 using SkyReg.Forms.DatabaseConfiguration;
 using SkyReg.Common.Extensions;
@@ -20,7 +19,7 @@ namespace SkyReg.MainForm
     public partial class FrmLogin : KryptonForm
     {
         private ErrorProvider validateControl = new ErrorProvider();
-        private BaseModel UserConfig { get; set; }
+        private LoggedUser UserConfig { get; set; }
 
         private FrmDataBaseConfig frmDataBaseConfig = null;
         private FrmRegistration frmRegistration = null;
@@ -38,8 +37,8 @@ namespace SkyReg.MainForm
             var user = ApplicationConfigsProvider.ProviderUserConfig();
             if(user != default)
             {
-                GlobalApplicationSettings.UserId = user.UserId;
-                GlobalApplicationSettings.UserLogin = Txt_Login.Text = user.Login;
+                GlobalApplicationSettings.User = user;
+                Txt_Login.Text = user.Login;
             }
         }
 
@@ -97,12 +96,11 @@ namespace SkyReg.MainForm
             {
                 if (ValidateControls())
                 {
-                    var userExist = _userRepository.Find(login, password.EncryptString());
-                    if (userExist != null)
+                    var user = _userRepository.Find(login, password.EncryptString());
+                    if (user != null)
                     {
-                        GlobalApplicationSettings.UserLogin = userExist.Login;
-                        GlobalApplicationSettings.UserId = userExist.Id;
-                        SaveUserConfig(userExist);
+                        GlobalApplicationSettings.User = new LoggedUser { Id = user.Id, Login = user.Login };
+                        SaveUserConfig(user);
                         this.DialogResult = DialogResult.OK;
                     }
                     else
@@ -122,11 +120,11 @@ namespace SkyReg.MainForm
             string saveFile = GlobalApplicationSettings.GlobalPathFile + @"\UserConfig.json";
             CreateSkyregFolder();
 
-            var userConfig = new BaseModel();
+            var userConfig = new LoggedUser();
             using (StreamWriter TW = new StreamWriter(saveFile, false, Encoding.GetEncoding("windows-1250")))
             {
                 userConfig.Login = user.Login;
-                userConfig.UserId = user.Id;
+                userConfig.Id = user.Id;
                 TW.Write(JsonConvert.SerializeObject(userConfig));
             }
 

@@ -18,7 +18,7 @@ namespace SkyReg
         {
             tstrVersion.Text = String.Format("{0}  ", GlobalApplicationSettings.AppVer);
             tstrComputerName.Text = Environment.MachineName;
-            tstrLoggedUser.Text = GlobalApplicationSettings.UserLogin;
+            tstrLoggedUser.Text = GlobalApplicationSettings.User.Login;
         }
 
         private void btn_Products_Click(object sender, EventArgs e)

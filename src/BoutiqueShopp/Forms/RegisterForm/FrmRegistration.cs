@@ -2,6 +2,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using Database;
 using SkyReg.Common;
+using SkyReg.Extensions;
 
 namespace SkyReg.Forms.RegisterForm
 {
@@ -32,8 +33,8 @@ namespace SkyReg.Forms.RegisterForm
                 HashedPassword = hashedPasword
             };
 
-            GlobalApplicationSettings.UserId = _userRepository.Create(user);
-            GlobalApplicationSettings.UserLogin = user.Login;
+            var userId = _userRepository.Create(user);
+            GlobalApplicationSettings.User = new LoggedUser { Id = userId, Login = user.Login };
             
             this.Close();
         }

@@ -11,7 +11,7 @@ namespace BoutiqueShopp.Infrastructure.Providers.DatabaseConfig
 {
     public static class ApplicationConfigsProvider
     {
-        public static BaseModel ProviderUserConfig()
+        public static LoggedUser ProviderUserConfig()
         {
             try
             {
@@ -19,7 +19,7 @@ namespace BoutiqueShopp.Infrastructure.Providers.DatabaseConfig
                 {
 
                     var userConfigJson = File.ReadAllText(GlobalApplicationSettings.UserConfigFile);
-                    var userConfig = JsonConvert.DeserializeObject<BaseModel>(userConfigJson);
+                    var userConfig = JsonConvert.DeserializeObject<LoggedUser>(userConfigJson);
 
                     return userConfig;
                 }

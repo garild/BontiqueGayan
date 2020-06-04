@@ -3,8 +3,9 @@
 	@HashedPassword VARCHAR(4000)
 AS
 BEGIN
-
-	SELECT  [Name]
+	
+	SELECT  [Id]
+		   ,[Name]
            ,[Login]
            ,[HashedPassword]
            ,[CreatedAt]

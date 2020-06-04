@@ -71,5 +71,6 @@
     <Build Include="Roles\Roles.sql" />
     <Build Include="StoredProcedures\Users\Users_CreateNew.sql" />
     <Build Include="StoredProcedures\Users\User_FindByLoginAndPassword.sql" />
+    <Build Include="Tables\Customers.sql" />
   </ItemGroup>
 </Project>

@@ -65,9 +65,8 @@
     <Reference Include="DapperExtensions, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation, Version=6.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentValidation.6.2.0.0\lib\portable-net40+sl50+wp80+win8+wpa81\FluentValidation.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.8.6.2\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Extended Toolkit">
       <HintPath>C:\Users\G\Downloads\Demos\Krypton Extended Toolkit.dll</HintPath>
@@ -140,6 +139,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -174,8 +176,10 @@
     <Compile Include="Common\Helper\BaseModel.cs" />
     <Compile Include="Common\Helper\GlobalApplicationSettings.cs" />
     <Compile Include="Common\Security.cs" />
-    <Compile Include="Domain\IUserRepository.cs" />
-    <Compile Include="Domain\Users.cs" />
+    <Compile Include="Domain\Customers.cs" />
+    <Compile Include="Domain\ICustomerRepository.cs" />
+    <Compile Include="Domain\Users\IUserRepository.cs" />
+    <Compile Include="Domain\Users\Users.cs" />
     <Compile Include="Forms\DatabaseConfiguration\DatabaseDeploy.cs" />
     <Compile Include="Forms\DatabaseConfiguration\FrmDataBaseConfig.cs">
       <SubType>Form</SubType>

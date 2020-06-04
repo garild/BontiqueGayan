@@ -36,7 +36,11 @@
             this.StyleManager = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPanelEx1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx();
+            this.Txt_Password = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
+            this.Txt_Login = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.Txt_ServerName = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
+            this.kryptonBorderedLabel3 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
+            this.kryptonBorderedLabel2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
             this.btn_FileDialog = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonBorderedLabel4 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
             this.Txt_DatabaseName = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
@@ -46,10 +50,6 @@
             this.btn_Close = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.btn_Generate = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.DatabaseFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.kryptonBorderedLabel2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
-            this.Txt_Login = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.Txt_Password = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.kryptonBorderedLabel3 = new ExtendedControls.ExtendedToolkit.Controls.KryptonBorderedLabel();
             this.cMSDatabase.SuspendLayout();
             this.kryptonPanelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -119,6 +119,31 @@
             this.kryptonPanelEx1.Size = new System.Drawing.Size(501, 329);
             this.kryptonPanelEx1.TabIndex = 1;
             // 
+            // Txt_Password
+            // 
+            this.Txt_Password.DrawPrompt = true;
+            this.Txt_Password.FocusSelect = true;
+            this.Txt_Password.Location = new System.Drawing.Point(292, 214);
+            this.Txt_Password.Name = "Txt_Password";
+            this.Txt_Password.PasswordChar = '*';
+            this.Txt_Password.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.Txt_Password.PromptText = "";
+            this.Txt_Password.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Txt_Password.Size = new System.Drawing.Size(161, 20);
+            this.Txt_Password.TabIndex = 3;
+            // 
+            // Txt_Login
+            // 
+            this.Txt_Login.DrawPrompt = true;
+            this.Txt_Login.FocusSelect = true;
+            this.Txt_Login.Location = new System.Drawing.Point(292, 162);
+            this.Txt_Login.Name = "Txt_Login";
+            this.Txt_Login.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.Txt_Login.PromptText = "";
+            this.Txt_Login.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Txt_Login.Size = new System.Drawing.Size(161, 20);
+            this.Txt_Login.TabIndex = 2;
+            // 
             // Txt_ServerName
             // 
             this.Txt_ServerName.DrawPrompt = true;
@@ -129,14 +154,36 @@
             this.Txt_ServerName.PromptText = "";
             this.Txt_ServerName.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Txt_ServerName.Size = new System.Drawing.Size(161, 20);
-            this.Txt_ServerName.TabIndex = 30;
+            this.Txt_ServerName.TabIndex = 1;
+            // 
+            // kryptonBorderedLabel3
+            // 
+            this.kryptonBorderedLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonBorderedLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.kryptonBorderedLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonBorderedLabel3.Location = new System.Drawing.Point(230, 186);
+            this.kryptonBorderedLabel3.Name = "kryptonBorderedLabel3";
+            this.kryptonBorderedLabel3.Size = new System.Drawing.Size(54, 22);
+            this.kryptonBorderedLabel3.TabIndex = 28;
+            this.kryptonBorderedLabel3.Values.Text = "Hasło:";
+            // 
+            // kryptonBorderedLabel2
+            // 
+            this.kryptonBorderedLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonBorderedLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.kryptonBorderedLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonBorderedLabel2.Location = new System.Drawing.Point(230, 134);
+            this.kryptonBorderedLabel2.Name = "kryptonBorderedLabel2";
+            this.kryptonBorderedLabel2.Size = new System.Drawing.Size(54, 22);
+            this.kryptonBorderedLabel2.TabIndex = 28;
+            this.kryptonBorderedLabel2.Values.Text = "Login:";
             // 
             // btn_FileDialog
             // 
             this.btn_FileDialog.Location = new System.Drawing.Point(292, 249);
             this.btn_FileDialog.Name = "btn_FileDialog";
             this.btn_FileDialog.Size = new System.Drawing.Size(161, 26);
-            this.btn_FileDialog.TabIndex = 0;
+            this.btn_FileDialog.TabIndex = 4;
             this.btn_FileDialog.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_FileDialog.Values.Image")));
             this.btn_FileDialog.Values.Text = "Plik dabzy danych";
             this.btn_FileDialog.Click += new System.EventHandler(this.btn_FileDialog_Click);
@@ -162,7 +209,7 @@
             this.Txt_DatabaseName.PromptText = "";
             this.Txt_DatabaseName.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Txt_DatabaseName.Size = new System.Drawing.Size(161, 20);
-            this.Txt_DatabaseName.TabIndex = 31;
+            this.Txt_DatabaseName.TabIndex = 0;
             this.Txt_DatabaseName.Text = "BoutiqueShopp";
             // 
             // kryptonBorderedLabel1
@@ -211,7 +258,7 @@
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.btn_Close.Size = new System.Drawing.Size(103, 26);
-            this.btn_Close.TabIndex = 0;
+            this.btn_Close.TabIndex = 1;
             this.btn_Close.Values.Image = global::BoutiqueShopp.Properties.Resources.iconfinder_Delete_132746;
             this.btn_Close.Values.Text = "Zamknij";
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
@@ -230,53 +277,6 @@
             // DatabaseFileDialog
             // 
             this.DatabaseFileDialog.FileName = "DatabaseFileDialog";
-            // 
-            // kryptonBorderedLabel2
-            // 
-            this.kryptonBorderedLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.kryptonBorderedLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.kryptonBorderedLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonBorderedLabel2.Location = new System.Drawing.Point(230, 134);
-            this.kryptonBorderedLabel2.Name = "kryptonBorderedLabel2";
-            this.kryptonBorderedLabel2.Size = new System.Drawing.Size(54, 22);
-            this.kryptonBorderedLabel2.TabIndex = 28;
-            this.kryptonBorderedLabel2.Values.Text = "Login:";
-            // 
-            // Txt_Login
-            // 
-            this.Txt_Login.DrawPrompt = true;
-            this.Txt_Login.FocusSelect = true;
-            this.Txt_Login.Location = new System.Drawing.Point(292, 162);
-            this.Txt_Login.Name = "Txt_Login";
-            this.Txt_Login.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.Txt_Login.PromptText = "";
-            this.Txt_Login.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Txt_Login.Size = new System.Drawing.Size(161, 20);
-            this.Txt_Login.TabIndex = 30;
-            // 
-            // Txt_Password
-            // 
-            this.Txt_Password.DrawPrompt = true;
-            this.Txt_Password.FocusSelect = true;
-            this.Txt_Password.Location = new System.Drawing.Point(292, 214);
-            this.Txt_Password.Name = "Txt_Password";
-            this.Txt_Password.PasswordChar = '*';
-            this.Txt_Password.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.Txt_Password.PromptText = "";
-            this.Txt_Password.PromptTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Txt_Password.Size = new System.Drawing.Size(161, 20);
-            this.Txt_Password.TabIndex = 30;
-            // 
-            // kryptonBorderedLabel3
-            // 
-            this.kryptonBorderedLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.kryptonBorderedLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
-            this.kryptonBorderedLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonBorderedLabel3.Location = new System.Drawing.Point(230, 186);
-            this.kryptonBorderedLabel3.Name = "kryptonBorderedLabel3";
-            this.kryptonBorderedLabel3.Size = new System.Drawing.Size(54, 22);
-            this.kryptonBorderedLabel3.TabIndex = 28;
-            this.kryptonBorderedLabel3.Values.Text = "Hasło:";
             // 
             // FrmDataBaseConfig
             // 

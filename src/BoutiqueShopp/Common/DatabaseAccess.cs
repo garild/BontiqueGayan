@@ -14,12 +14,8 @@ namespace SkyReg.Common
 
     public sealed class DatabaseFactory
     {
-
-        private static SqlConnection conn = null;
-        private static SqlConnection updaterConn = null;
         private static SqlConnectionStringBuilder connBuilder = null;
         public static DatabaseAccess _databaseAccess { get; set; }
-        public static SqlTransaction Transaction { get; private set; }
 
         public static string CreateConnectionString(DatabaseAccess databaseAccess)
         {

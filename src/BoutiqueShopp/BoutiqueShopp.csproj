@@ -224,7 +224,6 @@
     <Compile Include="Infrastructure\Providers\DatabaseConfig\ApplicationConfigsProvider.cs" />
     <Compile Include="Infrastructure\Repositories\UserRepository.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Common\Extensions\CommonMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\DatabaseConfiguration\FrmDataBaseConfig.resx">
       <DependentUpon>FrmDataBaseConfig.cs</DependentUpon>

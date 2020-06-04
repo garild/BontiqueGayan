@@ -37,10 +37,10 @@ Source: ..\bin\Debug\MetroFramework.dll; DestDir: {app}; Flags: replacesameversi
 Source: ..\bin\Debug\MetroFramework.Fonts.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\BoutiqueShopp.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\DapperExtensions.dll; DestDir: {app}; Flags: replacesameversion
-Source: ..\bin\Debug\Dapper.Contrib.dll; DestDir: {app}; Flags: replacesameversion
+Source: ..\bin\Debug\Autofac.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\Krypton Toolkit.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\Krypton Wizard.dll; DestDir: {app}; Flags: replacesameversion
-Source: ..\bin\Debug\BoutiqueShopp.dacpac; DestDir: {app}; Flags: replacesameversion
+Source: ..\..\Infrastructure\Database\bin\Debug\BoutiqueShopp.dacpac; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\WinFormAnimation.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\Newtonsoft.Json.dll; DestDir: {app}; Flags: replacesameversion
 Source: ..\bin\Debug\NaviSuite.dll; DestDir: {app}; Flags: replacesameversion

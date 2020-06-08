@@ -6,14 +6,12 @@ namespace SkyReg.Common.Extensions
 {
     public sealed class FormsOpened<TFrom> where TFrom : class
     {
-        public static void OpenForm(TFrom form, params object[] ctorParams)
+        public static TFrom OpenForm(TFrom form, params object[] ctorParams)
         {
-            var newForm = new KryptonForm();
-
             if (form == default(TFrom))
                 form = (TFrom)Activator.CreateInstance(typeof(TFrom), ctorParams);
 
-            newForm = (form as KryptonForm);
+            var newForm = (form as KryptonForm);
             newForm.WindowState = FormWindowState.Normal;
             newForm.StartPosition = FormStartPosition.CenterParent;
             newForm.TopLevel = true;
@@ -28,16 +26,16 @@ namespace SkyReg.Common.Extensions
             newForm.Activate();
             newForm.ShowDialog();
 
+            return newForm as TFrom;
         }
 
-        public static void OpenMDIForm(TFrom form, KryptonForm parent, params object[] ctorParams)
+        public static TFrom OpenMDIForm(TFrom form, KryptonForm parent, params object[] ctorParams)
         {
-            var newForm = new KryptonForm();
 
             if (form == default(TFrom))
                 form = (TFrom)Activator.CreateInstance(typeof(TFrom), ctorParams);
 
-            newForm = (form as KryptonForm);
+            var newForm = (form as KryptonForm);
             newForm.MdiParent = parent;
             newForm.WindowState = FormWindowState.Maximized;
             newForm.Show();
@@ -51,6 +49,8 @@ namespace SkyReg.Common.Extensions
             newForm.BringToFront();
             newForm.Activate();
             newForm.Show();
+
+            return newForm as TFrom;
         }
     }
 }

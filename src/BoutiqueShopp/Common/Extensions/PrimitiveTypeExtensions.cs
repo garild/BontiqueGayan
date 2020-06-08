@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SkyReg.Common.Extensions
 {
@@ -27,5 +27,12 @@ namespace SkyReg.Common.Extensions
             return text.ToLower().Trim(); ;
         }
 
+
+        public static byte[] ImageToByte(this Image imageIn)
+        {
+            ImageConverter _imageConverter = new ImageConverter();
+            byte[] imageByte = (byte[])_imageConverter.ConvertTo(imageIn, typeof(byte[]));
+            return imageByte;
+        }
     }
 }

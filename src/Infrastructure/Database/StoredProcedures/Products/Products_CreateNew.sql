@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[Product_CreateNew]
 @Name VARCHAR(255),
-@ShortName VARCHAR(100),
+@Code VARCHAR(100),
 @Description VARCHAR(4000),
 @GeneralSize VARCHAR(10),
 @Size VARCHAR(10),
@@ -13,7 +13,7 @@ BEGIN
 
 INSERT INTO [dbo].[Products]
            ([Name]
-           ,[ShortName]
+           ,[Code]
            ,[Description]
            ,[GeneralSize]
            ,[Size]
@@ -23,12 +23,12 @@ INSERT INTO [dbo].[Products]
            ,[Quantity]
            ,[CreatedAt])
      VALUES
-           ( @Name, @ShortName, @Description, @GeneralSize, @Size, @Color, @Image, @Category, @Quantity,  GETDATE() )
+           ( @Name, @Code, @Description, @GeneralSize, @Size, @Color, @Image, @Category, @Quantity,  GETDATE() )
 
       SELECT  
             [Id]
             [Name]
-           ,[ShortName]
+           ,[Code]
            ,[Description]
            ,[GeneralSize]
            ,[Size]

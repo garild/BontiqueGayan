@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerDataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -46,24 +47,32 @@
             this.ProductDataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.btn_Search = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonPanelEx3 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.productDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.kryptonPanelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGrid)).BeginInit();
             this.kryptonPanelEx3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CustomerDataGrid
             // 
             this.CustomerDataGrid.AllowUserToAddRows = false;
             this.CustomerDataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CustomerDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.CustomerDataGrid.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CustomerDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.CustomerDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.CustomerDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CustomerDataGrid.Location = new System.Drawing.Point(0, 0);
@@ -75,18 +84,17 @@
             this.CustomerDataGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.CustomerDataGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.CustomerDataGrid.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CustomerDataGrid.Size = new System.Drawing.Size(800, 450);
+            this.CustomerDataGrid.Size = new System.Drawing.Size(1267, 481);
             this.CustomerDataGrid.TabIndex = 31;
             // 
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.AllowUserToAddRows = false;
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.kryptonDataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kryptonDataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -98,7 +106,7 @@
             this.kryptonDataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.kryptonDataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.kryptonDataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(800, 450);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1267, 481);
             this.kryptonDataGridView1.TabIndex = 32;
             // 
             // dataGridViewLinkColumn1
@@ -170,6 +178,7 @@
             this.btn_AddCustomer.TabIndex = 0;
             this.btn_AddCustomer.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddCustomer.Values.Image")));
             this.btn_AddCustomer.Values.Text = "Dodaj";
+            this.btn_AddCustomer.Click += new System.EventHandler(this.btn_AddCustomer_Click);
             // 
             // kryptonPanelEx1
             // 
@@ -183,20 +192,32 @@
             this.kryptonPanelEx1.Location = new System.Drawing.Point(234, 0);
             this.kryptonPanelEx1.Name = "kryptonPanelEx1";
             this.kryptonPanelEx1.PersistentColours = false;
-            this.kryptonPanelEx1.Size = new System.Drawing.Size(566, 450);
+            this.kryptonPanelEx1.Size = new System.Drawing.Size(1033, 481);
             this.kryptonPanelEx1.TabIndex = 34;
             // 
             // ProductDataGrid
             // 
             this.ProductDataGrid.AllowUserToAddRows = false;
             this.ProductDataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.ProductDataGrid.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ProductDataGrid.AutoGenerateColumns = false;
             this.ProductDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.ProductDataGrid.DataSource = this.productBindingSource;
+            this.ProductDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.ProductCategory,
+            this.ProductQuantity,
+            this.ProductName,
+            this.ProductCode,
+            this.ProductDescription,
+            this.ProductSize,
+            this.ProductColor,
+            this.ProductImage});
+            this.ProductDataGrid.DataSource = this.productDTOBindingSource;
             this.ProductDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductDataGrid.Location = new System.Drawing.Point(0, 0);
             this.ProductDataGrid.MultiSelect = false;
@@ -207,7 +228,10 @@
             this.ProductDataGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.ProductDataGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
             this.ProductDataGrid.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductDataGrid.Size = new System.Drawing.Size(566, 450);
+            this.ProductDataGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductDataGrid.Size = new System.Drawing.Size(1033, 481);
+            this.ProductDataGrid.StandardTab = true;
             this.ProductDataGrid.TabIndex = 30;
             // 
             // btn_Search
@@ -219,6 +243,7 @@
             this.btn_Search.TabIndex = 0;
             this.btn_Search.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Values.Image")));
             this.btn_Search.Values.Text = "Szukaj";
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // kryptonPanelEx3
             // 
@@ -239,18 +264,90 @@
             this.kryptonPanelEx3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanelEx3.Name = "kryptonPanelEx3";
             this.kryptonPanelEx3.PersistentColours = false;
-            this.kryptonPanelEx3.Size = new System.Drawing.Size(234, 450);
+            this.kryptonPanelEx3.Size = new System.Drawing.Size(234, 481);
             this.kryptonPanelEx3.TabIndex = 33;
             // 
-            // productBindingSource
+            // ProductId
             // 
-            this.productBindingSource.DataSource = typeof(BoutiqueShopp.Domain.Product);
+            this.ProductId.DataPropertyName = "Id";
+            this.ProductId.HeaderText = "Id";
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            this.ProductId.Visible = false;
+            // 
+            // ProductCategory
+            // 
+            this.ProductCategory.DataPropertyName = "Category";
+            this.ProductCategory.HeaderText = "Category";
+            this.ProductCategory.Name = "ProductCategory";
+            this.ProductCategory.ReadOnly = true;
+            // 
+            // ProductQuantity
+            // 
+            this.ProductQuantity.DataPropertyName = "Quantity";
+            this.ProductQuantity.HeaderText = "Quantity";
+            this.ProductQuantity.Name = "ProductQuantity";
+            this.ProductQuantity.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "Name";
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // ProductCode
+            // 
+            this.ProductCode.DataPropertyName = "Code";
+            this.ProductCode.HeaderText = "Code";
+            this.ProductCode.Name = "ProductCode";
+            this.ProductCode.ReadOnly = true;
+            // 
+            // ProductDescription
+            // 
+            this.ProductDescription.DataPropertyName = "Description";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductDescription.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ProductDescription.HeaderText = "Description";
+            this.ProductDescription.MinimumWidth = 100;
+            this.ProductDescription.Name = "ProductDescription";
+            this.ProductDescription.ReadOnly = true;
+            // 
+            // ProductSize
+            // 
+            this.ProductSize.DataPropertyName = "Size";
+            this.ProductSize.HeaderText = "Size";
+            this.ProductSize.Name = "ProductSize";
+            this.ProductSize.ReadOnly = true;
+            // 
+            // ProductColor
+            // 
+            this.ProductColor.DataPropertyName = "Color";
+            this.ProductColor.HeaderText = "Color";
+            this.ProductColor.Name = "ProductColor";
+            this.ProductColor.ReadOnly = true;
+            // 
+            // ProductImage
+            // 
+            this.ProductImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ProductImage.DataPropertyName = "Image";
+            this.ProductImage.FillWeight = 150F;
+            this.ProductImage.HeaderText = "Image";
+            this.ProductImage.MinimumWidth = 200;
+            this.ProductImage.Name = "ProductImage";
+            this.ProductImage.ReadOnly = true;
+            this.ProductImage.Width = 200;
+            // 
+            // productDTOBindingSource
+            // 
+            this.productDTOBindingSource.DataSource = typeof(BoutiqueShopp.Infrastructure.DTO.ProductDTO);
             // 
             // FrmProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1267, 481);
             this.Controls.Add(this.kryptonPanelEx1);
             this.Controls.Add(this.kryptonPanelEx3);
             this.Controls.Add(this.kryptonDataGridView1);
@@ -265,7 +362,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGrid)).EndInit();
             this.kryptonPanelEx3.ResumeLayout(false);
             this.kryptonPanelEx3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,6 +382,15 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView ProductDataGrid;
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Search;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPanelEx kryptonPanelEx3;
-        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.BindingSource productDTOBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductColor;
+        private System.Windows.Forms.DataGridViewImageColumn ProductImage;
     }
 }

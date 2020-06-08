@@ -86,6 +86,8 @@ namespace BoutiqueShopp.Forms.Products
             var customer = _customerRepository.GetAll();
 
             UpdateCustomerDataGrid(customer);
+
+            this.Close();
         }
 
         private void FrmCreateNewCustomer_FormClosed(object sender, FormClosedEventArgs e)

@@ -18,7 +18,6 @@ namespace SkyReg
         /// The main entry point for the application.
         /// </summary>
 
-        public static bool hasRestart = false;
         [STAThread]
         static void Main()
         {

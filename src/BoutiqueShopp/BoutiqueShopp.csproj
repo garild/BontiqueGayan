@@ -220,6 +220,12 @@
     <Compile Include="Forms\Customer\FrmCustomerList.Designer.cs">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Products\FrmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\FrmAddEditProduct.Designer.cs">
+      <DependentUpon>FrmAddEditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Products\FrmProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     <EmbeddedResource Include="Forms\Customer\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\FrmAddEditProduct.resx">
+      <DependentUpon>FrmAddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Products\FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +296,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BoutiqueShopp.Domain.Product.datasource" />
     <None Include="Properties\DataSources\BoutiqueShopp.Infrastructure.DTO.CustomerDto.datasource" />
+    <None Include="Properties\DataSources\BoutiqueShopp.Infrastructure.DTO.ProductDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

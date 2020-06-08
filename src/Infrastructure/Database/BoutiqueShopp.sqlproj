@@ -80,5 +80,6 @@
     <Build Include="Tables\Products.sql" />
     <Build Include="StoredProcedures\Customers\Customer_DeleteWhereId.sql" />
     <Build Include="StoredProcedures\Products\Products_CreateNew.sql" />
+    <Build Include="StoredProcedures\Products\Product_GetAll.sql" />
   </ItemGroup>
 </Project>

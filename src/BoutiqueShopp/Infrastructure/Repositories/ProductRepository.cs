@@ -1,6 +1,8 @@
 ﻿using BoutiqueShopp.Domain;
 using Dapper;
+using SkyReg.Common.Extensions;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 
@@ -20,7 +22,7 @@ namespace BoutiqueShopp.Infrastructure.Repositories
             var result = _connection.QueryFirst<Product>("Product_CreateNew", new
             {
                 data.Name,
-                data.ShortName,
+                data.Code,
                 data.Quantity,
                 data.Category,
                 data.Color,
@@ -29,8 +31,14 @@ namespace BoutiqueShopp.Infrastructure.Repositories
                 data.GeneralSize,
                 data.Description
 
-            }, commandType: CommandType.StoredProcedure);
+            }, commandType: CommandType.StoredProcedure); ;
 
+            return result;
+        }
+
+        public List<Product> GetAll()
+        {
+            var result = _connection.Query<Product>("Product_GetAll", null, commandType: CommandType.StoredProcedure).AsList();
             return result;
         }
 

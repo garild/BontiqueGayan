@@ -14,5 +14,18 @@ namespace SkyReg.Common.Extensions
             return true;
         }
 
+        public static string DefaultValue(this string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return null;
+
+            return text;
+        }
+
+        public static string TrimToLower(this string text)
+        {
+            return text.ToLower().Trim(); ;
+        }
+
     }
 }

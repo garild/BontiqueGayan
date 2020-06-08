@@ -1,7 +1,6 @@
 ﻿using BoutiqueShopp.Domain;
 using Dapper;
 using Database;
-using Microsoft.SqlServer.Dac.Model;
 using System;
 using System.Data;
 using System.Linq;
@@ -17,7 +16,7 @@ namespace BoutiqueShopp.Infrastructure.Repositories
             _connection = connection;
         }
 
-        public int Create(Users user)
+        public int Create(User user)
         {
             var result = _connection.ExecuteScalar<int>("Users_CreateNew", new
             {
@@ -29,14 +28,14 @@ namespace BoutiqueShopp.Infrastructure.Repositories
             return result;
         }
 
-        public Users Find(string login, string hashedPassword)
+        public User Find(string login, string hashedPassword)
         {
-            var result = _connection.Query<Users>("User_FindByLoginAndPassword", new { login, hashedPassword }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            var result = _connection.Query<User>("User_FindByLoginAndPassword", new { login, hashedPassword }, commandType: CommandType.StoredProcedure).FirstOrDefault();
 
             return result;
         }
 
-        public void Update(Users user)
+        public void Update(User user)
         {
             throw new NotImplementedException();
         }

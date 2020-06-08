@@ -29,23 +29,23 @@ namespace SkyReg
             AppDomain.CurrentDomain.FirstChanceException += CurrentDomain_FirstChanceException;
             try
             {
-                _splashScreen = FormsOpened<SplashScreen>.IsOpened(_splashScreen);
+                _splashScreen = new SplashScreen();
                 _splashScreen.WindowState = FormWindowState.Normal;
                 _splashScreen.StartPosition = FormStartPosition.CenterScreen;
 
                 if (_splashScreen.ShowDialog() == DialogResult.OK)
                 {
                     if (!_splashScreen.DatabaseExists)
-                    {
-                        frmDataBaseConfig = FormsOpened<FrmDataBaseConfig>.IsShowDialog(frmDataBaseConfig);
-                        frmDataBaseConfig.ShowDialog();
-                    }
+                         FormsOpened<FrmDataBaseConfig>.OpenForm(frmDataBaseConfig);
+
                     var container = BuildContainer();
-                    FrmLogin frm = new FrmLogin(container);
+
+                    var frm = new FrmLogin(container);
+
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         frm.Close();
-                        _frmMain = FormsOpened<FrmMain>.IsOpened(_frmMain);
+                        _frmMain = new FrmMain(container);
 
                         using (var scope = container.BeginLifetimeScope())
                             Application.Run(_frmMain);

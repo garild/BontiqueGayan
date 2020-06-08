@@ -26,7 +26,7 @@ namespace SkyReg.Forms.RegisterForm
 
             var hashedPasword = Txt_Password.Text.EncryptString();
 
-            var user = new Users
+            var user = new User
             {
                 Login = Txt_Login.Text.ToLower().Trim(),
                 Name = Txt_Name.Text.ToLower().Trim(),

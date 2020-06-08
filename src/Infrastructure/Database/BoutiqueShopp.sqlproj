@@ -62,6 +62,8 @@
     <Folder Include="Roles" />
     <Folder Include="StoredProcedures" />
     <Folder Include="StoredProcedures\Users" />
+    <Folder Include="StoredProcedures\Customers" />
+    <Folder Include="StoredProcedures\Products" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
@@ -72,5 +74,11 @@
     <Build Include="StoredProcedures\Users\Users_CreateNew.sql" />
     <Build Include="StoredProcedures\Users\User_FindByLoginAndPassword.sql" />
     <Build Include="Tables\Customers.sql" />
+    <Build Include="StoredProcedures\Customers\Customers_CreateNew.sql" />
+    <Build Include="StoredProcedures\Customers\Customers_GetAll.sql" />
+    <Build Include="StoredProcedures\Customers\Customer_FindById.sql" />
+    <Build Include="Tables\Products.sql" />
+    <Build Include="StoredProcedures\Customers\Customer_DeleteWhereId.sql" />
+    <Build Include="StoredProcedures\Products\Products_CreateNew.sql" />
   </ItemGroup>
 </Project>

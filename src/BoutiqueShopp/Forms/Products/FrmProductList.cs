@@ -2,14 +2,11 @@
 
 namespace BoutiqueShopp.Forms.Products
 {
-    public partial class FrmCustomerList : KryptonForm
+    public partial class FrmProductList : KryptonForm
     {
-        public FrmCustomerList()
+        public FrmProductList()
         {
             InitializeComponent();
-
-            
         }
-     
     }
 }

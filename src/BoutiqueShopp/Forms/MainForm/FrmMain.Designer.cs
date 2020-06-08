@@ -46,6 +46,7 @@
             this.btn_CustomerList = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.btn_Products = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.NotificationMessages = new ExtendedControls.ExtendedToolkit.Controls.KryptonToastNotificationPopup();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,18 @@
             // 
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Black;
             // 
+            // NotificationMessages
+            // 
+            this.NotificationMessages.AnimationInterval = 5;
+            this.NotificationMessages.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.NotificationMessages.ContentText = null;
+            this.NotificationMessages.Image = null;
+            this.NotificationMessages.IsRightToLeft = false;
+            this.NotificationMessages.OptionsMenu = null;
+            this.NotificationMessages.Size = new System.Drawing.Size(400, 100);
+            this.NotificationMessages.TitleFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.NotificationMessages.TitleText = null;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +250,7 @@
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Settings;
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_CustomerList;
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton btn_Products;
+        internal ExtendedControls.ExtendedToolkit.Controls.KryptonToastNotificationPopup NotificationMessages;
     }
 }
 

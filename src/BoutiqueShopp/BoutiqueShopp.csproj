@@ -65,6 +65,9 @@
     <Reference Include="DapperExtensions, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
     </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FluentValidation.8.6.2\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
@@ -159,6 +162,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="Toolkit Settings, Version=5.470.353.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\G\Downloads\Demos\Toolkit Settings.dll</HintPath>
@@ -176,10 +180,18 @@
     <Compile Include="Common\Helper\LoggedUser.cs" />
     <Compile Include="Common\Helper\GlobalApplicationSettings.cs" />
     <Compile Include="Common\Security.cs" />
-    <Compile Include="Domain\Customers.cs" />
+    <Compile Include="Domain\Customer.cs" />
     <Compile Include="Domain\ICustomerRepository.cs" />
+    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\IProductRepository.cs" />
     <Compile Include="Domain\Users\IUserRepository.cs" />
-    <Compile Include="Domain\Users\Users.cs" />
+    <Compile Include="Domain\Users\User.cs" />
+    <Compile Include="Forms\Customer\FrmCreateNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FrmCreateNewCustomer.Designer.cs">
+      <DependentUpon>FrmCreateNewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DatabaseConfiguration\DatabaseDeploy.cs" />
     <Compile Include="Forms\DatabaseConfiguration\FrmDataBaseConfig.cs">
       <SubType>Form</SubType>
@@ -202,11 +214,17 @@
     <Compile Include="Forms\LoginForm\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Products\FrmCustomerList.cs">
+    <Compile Include="Forms\Customer\FrmCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Products\FrmCustomerList.Designer.cs">
+    <Compile Include="Forms\Customer\FrmCustomerList.Designer.cs">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products\FrmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\FrmProductList.Designer.cs">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegisterForm\FrmRegistration.cs">
       <SubType>Form</SubType>
@@ -221,10 +239,18 @@
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\DI\RegisterServicesExtension.cs" />
+    <Compile Include="Infrastructure\DTO\Address.cs" />
+    <Compile Include="Infrastructure\DTO\CustomerDTO.cs" />
+    <Compile Include="Infrastructure\DTO\ProductDTO.cs" />
     <Compile Include="Infrastructure\Providers\DatabaseConfig\ApplicationConfigsProvider.cs" />
+    <Compile Include="Infrastructure\Repositories\CustomerRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\ProductRepository.cs" />
     <Compile Include="Infrastructure\Repositories\UserRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Customer\FrmCreateNewCustomer.resx">
+      <DependentUpon>FrmCreateNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DatabaseConfiguration\FrmDataBaseConfig.resx">
       <DependentUpon>FrmDataBaseConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,8 +261,11 @@
     <EmbeddedResource Include="Forms\LoginForm\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Products\FrmCustomerList.resx">
+    <EmbeddedResource Include="Forms\Customer\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\FrmProductList.resx">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm\FrmRegistration.resx">
       <DependentUpon>FrmRegistration.cs</DependentUpon>
@@ -256,6 +285,8 @@
     <None Include="Common\Resources\EF_dll.reg" />
     <None Include="Instalator\Install.iss" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BoutiqueShopp.Domain.Product.datasource" />
+    <None Include="Properties\DataSources\BoutiqueShopp.Infrastructure.DTO.CustomerDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

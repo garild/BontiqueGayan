@@ -35,7 +35,7 @@ namespace SkyReg.MainForm
         private void LoadUserSettings()
         {
             var user = ApplicationConfigsProvider.ProviderUserConfig();
-            if(user != default)
+            if (user != default)
             {
                 GlobalApplicationSettings.User = user;
                 Txt_Login.Text = user.Login;
@@ -44,11 +44,11 @@ namespace SkyReg.MainForm
 
         private void AllowDbConfig()
         {
-            if (Txt_Login.Text.ToLower() == "Admin")
-                if (Txt_Password.Text.ToLower() == "SP33dMy$QL")
-                    btnDatabaseCfg.Enabled = true;
-                else
-                    btnDatabaseCfg.Enabled = false;
+            if (Txt_Login.Text.ToLower() == "admin" && Txt_Password.Text == "SP33dMy$QL")
+                btnDatabaseCfg.Enabled = true;
+
+            else
+                btnDatabaseCfg.Enabled = false;
         }
 
         private bool ValidateControls()
@@ -75,8 +75,6 @@ namespace SkyReg.MainForm
             return result;
         }
 
-       
-
         private void Btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,7 +87,7 @@ namespace SkyReg.MainForm
 
         private void LogIn()
         {
-            string login = Txt_Login.Text.ToLower();
+            string login = Txt_Login.Text.TrimToLower();
             string password = Txt_Password.Text;
 
             try
@@ -115,7 +113,7 @@ namespace SkyReg.MainForm
             }
         }
 
-        private void SaveUserConfig(Users user)
+        private void SaveUserConfig(User user)
         {
             string saveFile = GlobalApplicationSettings.GlobalPathFile + @"\UserConfig.json";
             CreateSkyregFolder();
@@ -154,14 +152,17 @@ namespace SkyReg.MainForm
 
         private void btnDatabaseCfg_Click(object sender, EventArgs e)
         {
-            frmDataBaseConfig = FormsOpened<FrmDataBaseConfig>.IsShowDialog(frmDataBaseConfig);
-            frmDataBaseConfig.ShowDialog();
+            FormsOpened<FrmDataBaseConfig>.OpenForm(frmDataBaseConfig);
         }
 
         private void RegisterUser_Click(object sender, EventArgs e)
         {
-            frmRegistration = FormsOpened<FrmRegistration>.IsShowDialog(frmRegistration, _userRepository);
-            frmRegistration.ShowDialog();
+            FormsOpened<FrmRegistration>.OpenForm(frmRegistration, _userRepository);
+        }
+
+        private void cMSDatabase_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            AllowDbConfig();
         }
     }
 }

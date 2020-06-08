@@ -4,11 +4,11 @@
 	[Nick] VARCHAR(255) NOT NULL,
 	[Name] VARCHAR(255) NOT NULL,
 	[LastName] VARCHAR(255) NOT NULL,
-	[PhoneNumber] VARCHAR(12) NOT NULL,
-	[Email] VARCHAR(50) NOT NULL,
-	[Address] VARCHAR(255) NOT NULL,
-	[City] VARCHAR(255) NOT NULL,
-	[PostCode] VARCHAR(50) NOT NULL,
+	[PhoneNumber] VARCHAR(12) NULL,
+	[Email] VARCHAR(50) NULL,
+	[Address] VARCHAR(255) NULL,
+	[City] VARCHAR(255) NULL,
+	[PostCode] VARCHAR(50) NULL,
 	[CreatedAt] DateTime2(2) DEFAULT(GETDATE()) NOT NULL, 
     [UpdatedAt] DateTime2(2)  
 

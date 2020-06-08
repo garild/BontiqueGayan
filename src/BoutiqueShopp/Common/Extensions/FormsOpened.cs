@@ -1,34 +1,56 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
+using System.Windows.Forms;
 
 namespace SkyReg.Common.Extensions
 {
     public sealed class FormsOpened<TFrom> where TFrom : class
     {
-        public static TFrom IsOpened(TFrom form)
+        public static void OpenForm(TFrom form, params object[] ctorParams)
         {
+            var newForm = new KryptonForm();
+
             if (form == default(TFrom))
-                return Activator.CreateInstance<TFrom>();
-                
-            return form;
+                form = (TFrom)Activator.CreateInstance(typeof(TFrom), ctorParams);
+
+            newForm = (form as KryptonForm);
+            newForm.WindowState = FormWindowState.Normal;
+            newForm.StartPosition = FormStartPosition.CenterParent;
+            newForm.TopLevel = true;
+            newForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            newForm.ShowIcon = false;
+            newForm.FormClosed += (s, e) =>
+            {
+                newForm = null;
+            };
+
+            newForm.BringToFront();
+            newForm.Activate();
+            newForm.ShowDialog();
+
         }
 
-        public static TFrom IsShowDialog(TFrom form, params object[] ctorParams)
+        public static void OpenMDIForm(TFrom form, KryptonForm parent, params object[] ctorParams)
         {
+            var newForm = new KryptonForm();
+
             if (form == default(TFrom))
-            {
                 form = (TFrom)Activator.CreateInstance(typeof(TFrom), ctorParams);
-                var newForm = (form as KryptonForm);
-                newForm.WindowState = System.Windows.Forms.FormWindowState.Normal;
-                newForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-                newForm.TopLevel = true;
-                newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-                newForm.ShowIcon = false; 
-                newForm.BringToFront();
-                return newForm as TFrom;
-            }
-            
-            return form; 
+
+            newForm = (form as KryptonForm);
+            newForm.MdiParent = parent;
+            newForm.WindowState = FormWindowState.Maximized;
+            newForm.Show();
+            newForm.BringToFront();
+            newForm.Activate();
+            newForm.FormClosed += (s, e) =>
+            {
+                newForm = null;
+            };
+
+            newForm.BringToFront();
+            newForm.Activate();
+            newForm.Show();
         }
     }
 }

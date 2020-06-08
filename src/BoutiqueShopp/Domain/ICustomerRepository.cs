@@ -4,9 +4,12 @@ namespace BoutiqueShopp.Domain
 {
     public interface ICustomerRepository
     {
-        Customers FindBy(string name, string LastName);
-        List<Customers> GetAll();
-        void Update(Customers customers);
-        void Delete(Customers customers);
+        List<Customer> FindBy(string name, string LastName);
+        List<Customer> FindBy(string nick);
+        List<Customer> GetAll();
+        void Update(Customer customers);
+        void Delete(int id);
+        Customer Create(Customer customers);
+        Customer FindBy(int? customerId);
     }
 }

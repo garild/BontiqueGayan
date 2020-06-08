@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoutiqueShopp.Domain
 {
-    public class Customers
+    public class Customer
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Nick { get; set; }
@@ -16,8 +13,7 @@ namespace BoutiqueShopp.Domain
         public string Address { get; set; }
         public string City { get; set; }
         public string PostCode { get; set; }
-        public DateTime CreateAt { get; set; }
+        public DateTime CreateAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; }
-
     }
 }

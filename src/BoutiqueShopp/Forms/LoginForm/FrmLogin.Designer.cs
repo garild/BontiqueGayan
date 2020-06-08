@@ -59,6 +59,7 @@
             this.RegisterUser});
             this.cMSDatabase.Name = "contextMenuStrip1";
             this.cMSDatabase.Size = new System.Drawing.Size(173, 48);
+            this.cMSDatabase.Opening += new System.ComponentModel.CancelEventHandler(this.cMSDatabase_Opening);
             // 
             // btnDatabaseCfg
             // 
@@ -179,7 +180,7 @@
             this.btn_Close.Location = new System.Drawing.Point(309, 7);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.btn_Close.Size = new System.Drawing.Size(117, 26);
+            this.btn_Close.Size = new System.Drawing.Size(90, 26);
             this.btn_Close.TabIndex = 1;
             this.btn_Close.Values.Image = global::BoutiqueShopp.Properties.Resources.iconfinder_Delete_132746;
             this.btn_Close.Values.Text = "Zamknij";
@@ -187,10 +188,10 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(192, 7);
+            this.btn_Login.Location = new System.Drawing.Point(196, 7);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.btn_Login.Size = new System.Drawing.Size(109, 26);
+            this.btn_Login.Size = new System.Drawing.Size(91, 26);
             this.btn_Login.TabIndex = 0;
             this.btn_Login.Values.Image = global::BoutiqueShopp.Properties.Resources.iconfinder_Apply_132742;
             this.btn_Login.Values.Text = "Zaloguj się";
